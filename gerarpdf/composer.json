@@ -1,0 +1,22 @@
+{
+    "name": "fernando01santana/gerandopdf",
+    "description": "description_text",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [{
+        "name": "Fernando S. Santana",
+        "email": "cool.fernando23@gmail.com",
+        "role": "Desenvolvedor"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Source\\":"source/"
+        }
+      
+    },
+    "require": {
+        "dompdf/dompdf":"0.8.*"
+    }
+}

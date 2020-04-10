@@ -1,0 +1,10 @@
+.formulario{
+    width: 100% !important;
+    height: 100vh !important;
+}
+.formulario{
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
