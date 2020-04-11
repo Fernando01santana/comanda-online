@@ -1,14 +1,10 @@
 <?php
 //include '../PDO/conexao.php';
 
-$pedido = $_GET['pizza'];
-$quantidadePizza = $_GET['quantidade_pizza'];
-$marca = $_GET['marca'];
-$tamanho = $_GET['tamanho'];
-$mesa = $_GET['mesa'];
-$quantidade = $_GET['quantidade'];
-$sabor = $_GET['sabor'];
-$mesa = $_GET['mesa'];		
+  $pedido = $_POST['pizza'];
+  $quantidade = $_POST['quantidade'];
+  $bebida = $_POST['marca'];
+  $tamanho = $_POST['tamanho']; 		
   date_default_timezone_set('America/Fortaleza');
   
 
@@ -60,38 +56,47 @@ $mesa = $_GET['mesa'];
 	</thead>
 	<tbody>
 		<tr class="top">
-			<td colspan="3">Pedido</td>
+			<td colspan="3">Doce de brigadeiro</td>
 		</tr>
 		<tr>
-			<td colspan="2"><?php echo $pedido;?></td>
-			<td align="right"><?php echo $quantidadePizza?></td>
+			<td>R$7,99</td>
+			<td>2.0</td>
+			<td>R$15,98</td>
 		</tr>
 		<tr>
-			<td colspan="3">Sabor</td>
+			<td colspan="3">Opcional Adicicional: grande</td>
 		</tr>
 		<tr>
-			<td><?php echo $sabor;?></td>
+			<td>R$0,33</td>
+			<td>2.0</td>
+			<td>R$0,66</td>
 		</tr>
 	</tbody>
 	<tfoot>
 		<tr class="sup ttu p--0">
 			<td colspan="3">
-				<b>Bebidas</b>
+				<b>Totais</b>
 			</td>
 		</tr>
 		<tr class="ttu">
-			<td colspan="2"><?php echo $marca;?></td>
-			<td align="right"><?php echo $quantidade;?></td>
+			<td colspan="2">Sub-total</td>
+			<td align="right">R$43,60</td>
 		</tr>
-		<tr class="sup ttu p--0">
-			<td colspan="3">
-				<b>sub total</b>
-			</td>
-		</tr>
-
 		<tr class="ttu">
-			<td colspan="2"><?php echo 'total da compra';?></td>
-			
+			<td colspan="2">Taxa de serviço</td>
+			<td align="right">R$4,60</td>
+		</tr>
+		<tr class="ttu">
+			<td colspan="2">Desconto</td>
+			<td align="right">5,00%</td>
+		</tr>
+		<tr class="ttu">
+			<td colspan="2">Total</td>
+			<td align="right">R$45,56</td>
+		</tr>
+		<tr class="ttu">
+			<td colspan="2">data</td>
+			<td align="right"><?php echo date('d/m/y');?></td>
 		</tr>
 	</tfoot>
 </table>
